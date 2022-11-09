@@ -45,5 +45,17 @@ class fizzbuzzShould {
         assertThat(FizzBuzz.convert(input)).isEqualTo(result);
     }
 
+    @ParameterizedTest
+    @CsvSource({
+            "15,fizzbuzz",
+            "30,fizzbuzz",
+            "45,fizzbuzz"
+    })
+   public void
+   convert_multiples_of_3_5_to_fizzbuzz(int input, String result) {
+        assertThat(FizzBuzz.convert(input)).isEqualTo(result);
+    }
+
+
 
 }
