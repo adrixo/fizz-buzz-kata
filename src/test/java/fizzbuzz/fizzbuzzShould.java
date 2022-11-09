@@ -19,10 +19,17 @@ class fizzbuzzShould {
     convert_numbers(int input, String result) {
         assertThat(FizzBuzz.convert(input)).isEqualTo(result);
     }
-    
-    @Test public void
-    convert_3_to_fizz() {
-        assertThat(FizzBuzz.convert(3)).isEqualTo("fizz");
+
+    @ParameterizedTest
+    @CsvSource({
+            "3,fizz",
+            "6,fizz",
+            "9,fizz",
+            "12,fizz"
+    })
+    public void
+    convert_multiples_of_3_to_fizz(int input, String result) {
+        assertThat(FizzBuzz.convert(input)).isEqualTo(result);
     }
 
     @Test public void
