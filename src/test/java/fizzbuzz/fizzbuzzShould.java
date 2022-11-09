@@ -19,5 +19,16 @@ class fizzbuzzShould {
     convert_numbers(int input, String result) {
         assertThat(FizzBuzz.convert(input)).isEqualTo(result);
     }
+    
+    @Test public void
+    convert_3_to_fizz() {
+        assertThat(FizzBuzz.convert(3)).isEqualTo("fizz");
+    }
+
+    @Test public void
+    convert_5_to_fizz() {
+        assertThat(FizzBuzz.convert(5)).isEqualTo("buzz");
+    }
+
 
 }
